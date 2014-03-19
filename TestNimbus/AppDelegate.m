@@ -7,6 +7,11 @@
 //
 
 #import "AppDelegate.h"
+#import "TNMainViewController.h"
+
+@interface AppDelegate ()
+@property (nonatomic, strong) TNMainViewController *mainVC ;
+@end
 
 @implementation AppDelegate
 
@@ -18,6 +23,10 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    self.mainVC = [[TNMainViewController alloc] init];
+    self.window.rootViewController = self.mainVC;
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
